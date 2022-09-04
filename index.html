@@ -25,14 +25,36 @@
     <h1>鸡兔同笼</h1>
     <form align="center">
         <label>头的总个数：</label>
-        <input type="number" placeholder="头的总个数">
+        <input type="number" placeholder="头的总个数" id="head" onkeyup="jttl()">
         <br>
         <p></p>
         <label>脚的总个数：</label>
-        <input type="number" placeholder="脚的总个数">
+        <input type="number" placeholder="脚的总个数" id="feet" onkeyup="jttl()">
         <br>
         <p></p>
         <input type="reset">
+        <br>
+        <p></p>
+        <strong id="result1"></strong>
+        <strong id="result2"></strong>
+        <script>
+            function jttl(){
+                let head = Math.abs(document.getElementById("head").value)
+                let feet = Math.abs(document.getElementById("feet").value)
+                let chick = head * 4 - feet
+                if (chick % 2 == 0){
+                    chick = chick / 2
+                    rabbit = head - chick
+                    if (rabbit > 0 && chick > 0){
+                        document.getElementById("result1").innerHTML = "鸡有" + chick + "只"
+                        document.getElementById("result2").innerHTML = "兔有" + rabbit + "只"
+                        return
+                    }
+                }
+                document.getElementById("result1").innerHTML = "此情况不存在"
+                document.getElementById("result2").innerHTML = "此情况不存在"
+            }
+        </script>
     </form>
     <style>
         html {
