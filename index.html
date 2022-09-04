@@ -38,14 +38,14 @@
         <strong id="result1"></strong>
         <strong id="result2"></strong>
         <script>
-            function jttl(){
+            function jttl() {
                 let head = Math.abs(document.getElementById("head").value)
                 let feet = Math.abs(document.getElementById("feet").value)
                 let chick = head * 4 - feet
-                if (chick % 2 == 0){
+                if (chick % 2 == 0) {
                     chick = chick / 2
                     rabbit = head - chick
-                    if (rabbit > 0 && chick > 0){
+                    if (rabbit > 0 && chick > 0) {
                         document.getElementById("result1").innerHTML = "鸡有" + chick + "只"
                         document.getElementById("result2").innerHTML = "兔有" + rabbit + "只"
                         return
@@ -74,6 +74,38 @@
 
         a:hover {
             font-weight: bolder;
+        }
+
+        @media(prefers-color-scheme:dark) {
+            body {
+                background-color: #111114;
+            }
+
+            h1,
+            label,
+            strong {
+                color: white;
+            }
+
+            a {
+                color: orangered;
+            }
+        }
+
+        @media(prefers-color-scheme:light) {
+            body {
+                background-color: whitesmoke;
+            }
+
+            h1,
+            label,
+            strong {
+                color: black;
+            }
+
+            a {
+                color: blue;
+            }
         }
     </style>
 </body>
