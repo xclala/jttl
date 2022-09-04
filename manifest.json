@@ -1,0 +1,12 @@
+{
+"name": "鸡兔同笼",
+"short_name": "鸡兔同笼",
+"start_url": "https://github.com/xclala/jttl",
+"display": "standalone",
+"description": "鸡兔同笼",
+"lang": "Chinese",
+"dir": "auto",
+"theme_color": "#000000",
+"background_color": "#000000",
+"orientation": "any",
+}
